@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+body{
+    background-image: linear-gradient(to right,rgb(129, 237, 129),rgb(7, 82, 7));
+}
+.mainBox{
+   display:flex;
+   flex-direction: column;
+   margin: auto;
+   border:2px solid black;
+   align-items: center;
+   width:50vw;
+   border-radius: 10px; 
+   padding:10px;  
+   background-color: white;
+}
+
+.balanceBox{
+    display: flex;
+    flex-direction: column;
+    border:2px solid black;
+    width:99%;
+    align-items:center;
+    border-radius: 10px;
+    margin:20px;
+    gap:10px;
+    padding:10px;
+    background-image: linear-gradient(to right,rgb(180, 247, 180),rgba(6, 73, 6, 0.8));
+}
+
+.money{
+    margin:10px;
+}
+.inc_exp{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    
+}
+
+.income{
+   width:40%;
+   display: flex;
+   flex-direction: column;
+   border: 2px solid black;
+   padding:10px;
+   gap:10px;
+   color:green;
+   font-weight: 800;
+   border-radius: 10px;
+   background-color: white;
+}
+
+.expense{
+   width:40%;
+    display: flex;
+   flex-direction: column;
+   border: 2px solid black;
+   padding: 10px;
+   gap:10px;
+   color:red;
+   font-weight: 800;
+   border-radius: 10px;
+   background-color: white;
+}
+
+.mon{
+    font-size: x-large;
+}
+
+.exp{
+     font-size: x-large;
+}
+
+.transactions{
+    width:100%;
+    text-align: start;
+    font-weight: 600;
+}
+
+
+.belowtran{
+    display: flex;
+    flex-direction: row;
+    
+    width:100%;
+    justify-content: space-between;
+}
+
+.labelsbox{
+    width:50%;
+    overflow-y: scroll;
+    height: 400px;
+    padding:10px;
+   
+   
+
+}
+
+.labels{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+    box-shadow: 0 4px 10px whitesmoke; 
+    margin-bottom: 10px;
+}
+
+.ri{
+     border-right: 8px solid green ;
+}
+.wr{
+     border-right: 8px solid red ;
+}
+.forms{
+    width:50%;
+    border:2px solid gray;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 95%);
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+
+}
+
+.w{
+   font-size: large;
+   font-weight: 800;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    gap:5px;
+}
+
+.q{
+    font-size:small;
+    font-weight: 100;
+}
+
+.forms button{
+    margin-top: auto;
+    padding:10px;
+    font-size: small;
+    background-color: hsl(120, 100%, 30%);
+    color: white;
+    border-radius: 10px;
+}
+
+.wrong:hover{
+    background-color: grey;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(120, 100%, 25%);
+}
+
+form input{
+    padding:8px;
+    border-radius: 10px solid white;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+
+    .mainBox {
+        width: 90%;
+    }
+
+    .belowtran {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .labelsbox,
+    .forms {
+        width: 100%;
+    }
+
+    .labelsbox {
+        min-height: 300px;
+        max-height: 400px;
+    }
+
+    .income,
+    .expense {
+        width: 45%;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .mainBox {
+        width: 95%;
+        padding: 8px;
+    }
+
+    .balanceBox {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .inc_exp {
+        gap: 10px;
+    }
+
+    .income,
+    .expense {
+        width: 50%;
+        padding: 8px;
+    }
+
+    .mon,
+    .exp {
+        font-size: large;
+    }
+
+    .belowtran {
+        gap: 15px;
+    }
+
+    .labelsbox {
+        min-height: 250px;
+        padding: 5px;
+    }
+
+    .labels {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .forms {
+        padding: 8px;
+    }
+
+    form {
+        padding: 5px;
+    }
+}
+
+.labelsbox::-webkit-scrollbar {
+    width: 8px;
+}
+
+.labelsbox::-webkit-scrollbar-track {
+    background-color: #e8f5e9;
+    border-radius: 10px;
+}
+
+.labelsbox::-webkit-scrollbar-thumb {
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+.labelsbox::-webkit-scrollbar-thumb:hover {
+    background-color: #2e7d32;
+}
+
